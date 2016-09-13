@@ -5,6 +5,11 @@
 var parseJSON = function(json) {
   //json = json.substring(1,json.length-1);
   json = json.replace(/\r\n|\t|\n\r|\n/g,"");
+  
+  //if string contains \s, we think if there's more than 3, keep 1. Else get rid. 
+  //think we may need to search through string and compare current element with previous and next
+  if (json.includes("\\\""))
+
 
   // array
   function parseArray(array){
